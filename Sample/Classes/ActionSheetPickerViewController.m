@@ -29,6 +29,15 @@
 #import "ActionSheetPickerViewController.h"
 #import "ActionSheetPicker.h"
 #import "NSDate+TCUtils.h"
+#import "ActionSheetMultiColumnStringPicker.h"
+
+
+@interface MultiColumnStringPickerItem : NSObject
+@property (nonatomic,copy) NSString *title;
+@property (nonatomic,strong) NSArray *childItems;
+@end
+@implementation MultiColumnStringPickerItem
+@end
 
 @interface ActionSheetPickerViewController()
 - (void)measurementWasSelectedWithBigUnit:(NSNumber *)bigUnit smallUnit:(NSNumber *)smallUnit element:(id)element;
@@ -119,6 +128,41 @@
 
 - (IBAction)selectAMeasurement:(UIControl *)sender {
     [ActionSheetDistancePicker showPickerWithTitle:@"Select Length" bigUnitString:@"m" bigUnitMax:330 selectedBigUnit:self.selectedBigUnit smallUnitString:@"cm" smallUnitMax:99 selectedSmallUnit:self.selectedSmallUnit target:self action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:) origin:sender];
+}
+
+- (IBAction)multiColumnStringSelect:(id)sender {
+    MultiColumnStringPickerItem *item1 = [[MultiColumnStringPickerItem alloc] init];
+    item1.title = @"Level 1";
+    
+    MultiColumnStringPickerItem *item11 = [[MultiColumnStringPickerItem alloc] init];
+    item11.title = @"Level 11";
+    MultiColumnStringPickerItem *item12 = [[MultiColumnStringPickerItem alloc] init];
+    item12.title = @"Level 12";
+    
+    MultiColumnStringPickerItem *item111 = [[MultiColumnStringPickerItem alloc] init];
+    item111.title = @"Level 111";
+    
+    item11.childItems = @[item111];
+    item1.childItems = @[item11,item12];
+    
+    
+    MultiColumnStringPickerItem *item2 = [[MultiColumnStringPickerItem alloc] init];
+    item2.title = @"Level 2";
+    
+    MultiColumnStringPickerItem *item21 = [[MultiColumnStringPickerItem alloc] init];
+    item21.title = @"Level 1";
+    
+    item2.childItems = @[item21];
+    
+    [ActionSheetMultiColumnStringPicker showPickerWithTitle:@"Select" items:@[item1,item2]
+                                            numberOfColumns:3
+                                                  doneBlock:^(ActionSheetMultiColumnStringPicker *picker, NSArray *selectedItems) {
+                                                      ;
+                                                  }
+                                                cancelBlock:^(ActionSheetMultiColumnStringPicker *picker) {
+                                                    ;
+                                                } origin:sender];
+    
 }
 
 #pragma mark - Implementation

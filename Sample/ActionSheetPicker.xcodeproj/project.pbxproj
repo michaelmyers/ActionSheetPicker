@@ -24,6 +24,7 @@
 		52CFA62313A4D6FA0022667F /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52CFA62213A4D6FA0022667F /* MainWindow-iPad.xib */; };
 		52FDE22813A51D2600D8D2C0 /* ActionSheetPickerViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FDE22713A51D2600D8D2C0 /* ActionSheetPickerViewController-iPad.xib */; };
 		9D7CAB321677211B001C5D09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7CAB311677211B001C5D09 /* Default-568h@2x.png */; };
+		9D7CAB3916772D1E001C5D09 /* ActionSheetMultiColumnStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CAB3816772D1D001C5D09 /* ActionSheetMultiColumnStringPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		52FDE22713A51D2600D8D2C0 /* ActionSheetPickerViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ActionSheetPickerViewController-iPad.xib"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ActionSheetPicker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ActionSheetPicker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9D7CAB311677211B001C5D09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9D7CAB3716772D1D001C5D09 /* ActionSheetMultiColumnStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultiColumnStringPicker.h; path = ../../Pickers/ActionSheetMultiColumnStringPicker.h; sourceTree = "<group>"; };
+		9D7CAB3816772D1D001C5D09 /* ActionSheetMultiColumnStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultiColumnStringPicker.m; path = ../../Pickers/ActionSheetMultiColumnStringPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				2237C38A146FBABC00C74831 /* ActionSheetDistancePicker.m */,
 				2237C390146FBC3000C74831 /* DistancePickerView.h */,
 				2237C391146FBC3000C74831 /* DistancePickerView.m */,
+				9D7CAB3716772D1D001C5D09 /* ActionSheetMultiColumnStringPicker.h */,
+				9D7CAB3816772D1D001C5D09 /* ActionSheetMultiColumnStringPicker.m */,
 			);
 			name = Pickers;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				2237C3971470D1F300C74831 /* NSDate+TCUtils.m in Sources */,
 				37037553147B387900B59AA2 /* ActionSheetStringPicker.m in Sources */,
 				37037557147B73F000B59AA2 /* AbstractActionSheetPicker.m in Sources */,
+				9D7CAB3916772D1E001C5D09 /* ActionSheetMultiColumnStringPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

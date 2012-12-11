@@ -47,5 +47,6 @@
 - (IBAction)animalButtonTapped:(UIBarButtonItem *)sender;
 - (IBAction)dateButtonTapped:(UIBarButtonItem *)sender;
 - (IBAction)selectAMeasurement:(id)sender;
+- (IBAction)multiColumnStringSelect:(id)sender;
 
 @end
